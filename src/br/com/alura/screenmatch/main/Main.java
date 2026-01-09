@@ -1,16 +1,16 @@
-import br.com.alura.screenmatch.calculos.RecommendationFilter;
-import br.com.alura.screenmatch.calculos.TimeCalculator;
-import br.com.alura.screenmatch.modelos.Episode;
-import br.com.alura.screenmatch.modelos.Film;
-import br.com.alura.screenmatch.modelos.Series;
+package br.com.alura.screenmatch.main;
+
+import br.com.alura.screenmatch.calculations.RecommendationFilter;
+import br.com.alura.screenmatch.calculations.TimeCalculator;
+import br.com.alura.screenmatch.models.Episode;
+import br.com.alura.screenmatch.models.Film;
+import br.com.alura.screenmatch.models.Series;
 
 import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        Film myFilm = new Film();
-        myFilm.setName("O Poderoso Chefão");
-        myFilm.setYearOfRelease(1972);
+        Film myFilm = new Film("O Poderoso Chefão", 1972);
         myFilm.setDurationInMinutes(175);
         System.out.println("Duração do filme: " + myFilm.getDurationInMinutes());
 
@@ -21,14 +21,10 @@ public class Main {
         System.out.println(myFilm.getTotalReviews());
         System.out.println("Média das avaliações: " + myFilm.getAverage());
 
-        Film myFilm2 = new Film();
-        myFilm2.setName("Avatar");
-        myFilm2.setYearOfRelease(2009);
+        Film myFilm2 = new Film("Avatar", 2009);
         myFilm2.setDurationInMinutes(168);
 
-        Series mySeries = new Series();
-        mySeries.setName("Lost");
-        mySeries.setYearOfRelease(2004);
+        Series mySeries = new Series("Lost", 2004);
         mySeries.displayTechnicalSpecifications();
         mySeries.setSeasons(6);
         mySeries.setEpisodesPerSeasons(24);
@@ -50,10 +46,8 @@ public class Main {
         episode.setViews(300);
         myFilter.filter(episode);
 
-        Film myFilm3 = new Film();
-        myFilm3.setName("Dogville");
+        Film myFilm3 = new Film("Dogville", 2003);
         myFilm3.setDurationInMinutes(200);
-        myFilm3.setYearOfRelease(2003);
         myFilm3.rate(10);
 
         ArrayList<Film> movieList = new ArrayList<>();

@@ -1,4 +1,4 @@
-package br.com.alura.screenmatch.modelos;
+package br.com.alura.screenmatch.models;
 
 public class Title {
     private String name;
@@ -7,6 +7,11 @@ public class Title {
     private double sumOfRatings;
     private int totalReviews;
     private int durationInMinutes;
+
+    public Title(String name, int yearOfRelease) {
+        this.name = name;
+        this.yearOfRelease = yearOfRelease;
+    }
 
     public int getTotalReviews(){
         return totalReviews;

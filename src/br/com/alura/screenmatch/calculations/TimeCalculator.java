@@ -1,8 +1,6 @@
-package br.com.alura.screenmatch.calculos;
+package br.com.alura.screenmatch.calculations;
 
-import br.com.alura.screenmatch.modelos.Film;
-import br.com.alura.screenmatch.modelos.Series;
-import br.com.alura.screenmatch.modelos.Title;
+import br.com.alura.screenmatch.models.Title;
 
 public class TimeCalculator {
     private int totalTime;

@@ -1,9 +1,13 @@
-package br.com.alura.screenmatch.modelos;
+package br.com.alura.screenmatch.models;
 
-import br.com.alura.screenmatch.calculos.Classifiable;
+import br.com.alura.screenmatch.calculations.Classifiable;
 
 public class Film extends Title implements Classifiable {
     String director;
+
+    public Film(String name, int yearOfRelease) {
+        super(name, yearOfRelease);
+    }
 
     public void setDirector(String director) {
         this.director = director;

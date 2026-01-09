@@ -1,10 +1,14 @@
-package br.com.alura.screenmatch.modelos;
+package br.com.alura.screenmatch.models;
 
 public class Series extends Title {
     private int seasons;
     private boolean inProgress;
     private int episodesPerSeasons;
     private int minutesPerEpisodes;
+
+    public Series(String name, int yearOfRelease) {
+        super(name, yearOfRelease);
+    }
 
     public int getSeasons() {
         return seasons;
